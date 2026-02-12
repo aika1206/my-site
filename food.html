@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>寝落ちと、夜のした</title>
+        <meta name="description" content="眠るための音楽ライブ">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- リセットcss -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+        <!-- スマホ縮尺 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            // adobeフォント
+            (function(d) {
+                var config = {
+                kitId: 'wdy4cuf',
+                scriptTimeout: 3000,
+                async: true
+                },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},
+                config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";
+                tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;
+                    if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+        </script>
+        <script>
+                (function(d) {
+                var config = {
+                kitId: 'wdy4cuf',
+                scriptTimeout: 3000,
+                async: true
+                },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},
+                config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";
+                tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;
+                    if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+        </script>
+
+        <!-- オリジナルcss -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- メインビジュアルとヘッダー -->
+        <div class="subcover cover-food">
+            <header class="page-header">
+                <h1 class="align-center">
+                    <img class="header" src="images/header.png" alt="寝落ちと、夜のした header"></a>
+                </h1>
+            </header>
+            <!-- ハンバーガーメニュー -->
+            <header class="header">
+                <!-- ハンバーガーボタン -->
+                <button id="hamburger" class="hamburger" aria-label="メニューを開く">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- メニュー本体 -->
+                 <nav id="nav" class="nav">
+                    <ul>
+                        <li><a href="guide.html"><img src="images/button5.png" alt="持ち物・過ごし方"></a></li>
+                        <li><a href="food.html"><img src="images/button6.png" alt="フード・体験"></a></li>
+                        <li><a href="music.html"><img src="images/button7.png" alt="楽曲・タイムテーブル"></a></li>
+                        <li><a href="access.html"><img src="images/button8.png" alt="アクセス・お問い合わせ"></a></li>
+                    </ul>
+                 </nav>
+            </header>
+        </div>
+        <script>
+            const hamburger = document.getElementById("hamburger");
+            const nav = document.getElementById("nav");
+
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("open");
+                nav.classList.toggle("open");
+            });
+         </script>
+
+        <!-- foodメニュー -->
+        <div class="Menu">
+            <img class="foodMenu" src="images/food title.png" alt="foodメニュー">
+        </div>
+
+        <!-- foodスライドショー -->
+        <div class="slideshow">
+            <div class="slide-image-wrap">
+                <button class="arrow left" onclick="prevFood()">
+                <img src="images/Left arrow.png" alt="前へ">
+                </button>
+
+                <img id="foodImage" src="images/Herbal tea.png" alt="スライド画像">
+
+                <button class="arrow right" onclick="nextFood()">
+                <img src="images/Right arrow.png" alt="次へ">
+                </button>
+            </div>
+
+            <div class="slide-bg">
+                <h2 class="slide-title" id="foodTitle">ハーブティー</h2>
+                <p id="foodText" class="slide-text">
+                ラベンダーとカモミールをブレンドした、心安らぐハーブティー。
+                </p>
+            </div>
+        </div>
+
+        <!-- 左雲 -->
+        <div class="slide-image-wrap">
+            <img class="cloud-left-food" src="images/cloud1.png" alt="左雲">
+        </div>
+        <!-- boothメニュー -->
+        <div class="Menu">
+            <img class="boothMenu" src="images/booth title.png" alt="boothメニュー">
+        </div>
+
+        <!-- boothスライドショー -->
+        <div class="slideshow">
+            <div class="slide-image-wrap">
+                <button class="arrow left" onclick="prevBooth()">
+                <img src="images/Left arrow.png" alt="前へ">
+                </button>
+
+                <img id="boothImage" src="images/Dream Diary Lab.png" alt="スライド画像">
+
+                <button class="arrow right" onclick="nextBooth()">
+                <img src="images/Right arrow.png" alt="次へ">
+                </button>
+            </div>
+
+            <div class="slide-bg">
+                <h2 class="slide-title" id="boothTitle">夢日記ラボ</h2>
+                <p id="boothText" class="slide-text">
+                今日の夢をそのまま書いて貼ってみよう。
+                </p>
+            </div>
+        </div>
+
+        <!-- 左雲 -->
+        <div class="slide-image-wrap">
+            <img class="cloud-left-food" src="images/cloud2.png" alt="左雲">
+        </div>
+
+        <!-- フッダーロゴ -->
+         <div class="footer">
+            <a href="index.html"><img class="footer-rogo" src="images/title rogo 2(仮).png" alt="ロゴ"></a>
+         </div>
+
+        <!-- Instagramリンク -->
+        <div class="Instagram">
+            <a href="https://www.ohara.ac.jp/"><img class="Instagramlink" src="images/Instagram.png" alt="Instagram"></a>
+        </div>
+
+        <!-- フッダー -->
+        <div class="copyright">
+            <small>&copy; 2026 Aika Kurosawa</small>
+        </div>
+
+        <!-- スライドショーJS -->
+        <script>
+            /*  food */
+            const foodSlides = [
+            { img: "images/Herbal tea.png", title: "ハーブティー", text: "ラベンダーとカモミールをブレンドした、心安らぐハーブティー。" },
+            { img: "images/Hot Cocoa.png", title: "ホットココア", text: "ミルクたっぷり、やさしい甘さのホットココア。" },
+            { img: "images/Hot wine.png", title: "ホットワイン", text: "スパイシーな香りが広がるホットワイン。" }
+            ];
+            let foodCurrent = 0;
+
+            const foodImage = document.getElementById("foodImage");
+            const foodTitle = document.getElementById("foodTitle");
+            const foodText  = document.getElementById("foodText");
+
+            function showFood(index) {
+            foodImage.src = foodSlides[index].img;
+            foodTitle.textContent = foodSlides[index].title;
+            foodText.textContent  = foodSlides[index].text;
+            }
+            function nextFood() {
+            foodCurrent = (foodCurrent + 1) % foodSlides.length;
+            showFood(foodCurrent);
+            }
+            function prevFood() {
+            foodCurrent = (foodCurrent - 1 + foodSlides.length) % foodSlides.length;
+            showFood(foodCurrent);
+            }
+
+            /*  booth  */
+            const boothSlides = [
+            { img: "images/Dream Diary Lab.png", title: "夢日記ラボ", text: "今日の夢をそのまま書いて貼ってみよう。" },
+            { img: "images/stage.png", title: "寝ころびスペース", text: "ステージの前でごろ寝。音楽に浸れるリラックススペースです。" },
+            ];
+            let boothCurrent = 0;
+
+            const boothImage = document.getElementById("boothImage");
+            const boothTitle = document.getElementById("boothTitle");
+            const boothText  = document.getElementById("boothText");
+
+            function showBooth(index) {
+            boothImage.src = boothSlides[index].img;
+            boothTitle.textContent = boothSlides[index].title;
+            boothText.textContent  = boothSlides[index].text;
+            }
+            function nextBooth() {
+            boothCurrent = (boothCurrent + 1) % boothSlides.length;
+            showBooth(boothCurrent);
+            }
+            function prevBooth() {
+            boothCurrent = (boothCurrent - 1 + boothSlides.length) % boothSlides.length;
+            showBooth(boothCurrent);
+            }
+
+            /* 初期表示 */
+            showFood(foodCurrent);
+            showBooth(boothCurrent);
+        </script>
+
+        <!-- トップへ戻るボタン -->
+        <a href="index.html" class="to-top-btn">
+            <img src="images/top-button.png" alt="ホームへ">
+        </a>
+    </body>
+</html>

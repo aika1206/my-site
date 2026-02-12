@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>寝落ちと、夜のした</title>
+        <meta name="description" content="眠るための音楽ライブ">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- リセットcss -->
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+
+        <!-- スマホ縮尺 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            // adobeフォント
+            (function(d) {
+                var config = {
+                kitId: 'wdy4cuf',
+                scriptTimeout: 3000,
+                async: true
+                },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},
+                config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";
+                tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;
+                    if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+        </script>
+        <script>
+                (function(d) {
+                var config = {
+                kitId: 'wdy4cuf',
+                scriptTimeout: 3000,
+                async: true
+                },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},
+                config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";
+                tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;
+                    if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+        </script>
+
+        <!-- オリジナルcss -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- メインビジュアルとヘッダー -->
+        <div class="subcover cover-music">
+            <header class="page-header">
+                <h1 class="align-center">
+                    <img class="header" src="images/header.png" alt="寝落ちと、夜のした header"></a>
+                </h1>
+            </header>
+            <!-- ハンバーガーメニュー -->
+            <header class="header">
+                <!-- ハンバーガーボタン -->
+                <button id="hamburger" class="hamburger" aria-label="メニューを開く">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- メニュー本体 -->
+                 <nav id="nav" class="nav">
+                    <ul>
+                        <li><a href="guide.html"><img src="images/button5.png" alt="持ち物・過ごし方"></a></li>
+                        <li><a href="food.html"><img src="images/button6.png" alt="フード・体験"></a></li>
+                        <li><a href="music.html"><img src="images/button7.png" alt="楽曲・タイムテーブル"></a></li>
+                        <li><a href="access.html"><img src="images/button8.png" alt="アクセス・お問い合わせ"></a></li>
+                    </ul>
+                 </nav>
+            </header>
+        </div>
+        <script>
+            const hamburger = document.getElementById("hamburger");
+            const nav = document.getElementById("nav");
+
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("open");
+                nav.classList.toggle("open");
+            });
+        </script>
+
+        <!-- 音楽のジャンルは？ -->
+        <div class="music">
+            <section class="section-title">
+                <img class="section-title-img" src="images/What is the genre of music.png" alt="音楽のジャンルは？">
+            </section>
+            <div class="music-text">
+                <ul>
+                    <li>アコースティック</li>
+                    <li>エレクトロポップ</li>
+                    <li>ローファイ　など</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 右雲 -->
+        <img class="cloud-right" src="images/cloud3.png" alt="右雲">
+        
+        <!-- タイムテーブル -->
+        <img class="timetable" src="images/timetable.png" alt="タイムテーブル">
+
+        <!-- 左雲 -->
+        <img class="cloud-left" src="images/cloud5.png" alt="左雲">
+        
+        <!-- フッダーロゴ -->
+        <div class="footer">
+            <a href="index.html"><img class="footer-rogo" src="images/title rogo 2(仮).png" alt="ロゴ"></a>
+        </div>
+        
+        <!-- Instagramリンク -->
+        <div class="Instagram">
+            <a href="https://www.ohara.ac.jp/"><img class="Instagramlink" src="images/Instagram.png" alt="Instagram"></a>
+        </div>
+
+        <!-- フッダー -->
+        <div class="copyright">
+            <small>&copy; 2026 Aika Kurosawa</small>
+        </div>
+
+        <!-- トップへ戻るボタン -->
+        <a href="index.html" class="to-top-btn">
+            <img src="images/top-button.png" alt="ホームへ">
+        </a>
+    </body>
+</html>
