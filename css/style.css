@@ -170,12 +170,11 @@ img {
 }
 .info {
     max-width: 480px;
-    margin: auto;
+    margin: 40px auto;
     padding: 10px 50px;
 }
 .info-item {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
@@ -190,6 +189,8 @@ img {
     text-align: right;
     max-width: 300px;
     line-height: 1.6;
+    font-size: 13px;
+    flex-wrap: wrap;
 }
 
 /* メニューボタン------------------------- */
