@@ -177,7 +177,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    /* gap: 16px; */
     padding: 12px 0;
 }
 .info-label {
@@ -189,7 +189,7 @@ img {
     text-align: right;
     max-width: 300px;
     line-height: 1.6;
-    font-size: 13px;
+    font-size: 15px;
     flex-wrap: wrap;
 }
 
