@@ -125,10 +125,12 @@ img {
     height: 100vh;       /* 画面いっぱい */
     background: url("../images/Hamburger\ menu\ bg.png") no-repeat center / cover;
     transition: top 0.4s ease;   /* ぬるっと動く */
+    opacity: 0;
 }
 /* openクラスが付いたら表示 */
 .nav.open {
     top: 0;   /* 上からスライドしてくる */
+    opacity: 1;
 }
 /* メニュー中身 */
 .nav ul {
@@ -173,6 +175,7 @@ img {
 }
 .info-item {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
@@ -181,7 +184,6 @@ img {
 .info-label {
     font-weight: bold;
     color: #555;
-    white-space: nowrap;
 }
 .info-text {
     color: #333;
@@ -189,6 +191,7 @@ img {
     max-width: 300px;
     line-height: 1.6;
 }
+
 /* メニューボタン------------------------- */
 .button-list {
     padding: 30px 0 30px 0;
@@ -305,6 +308,7 @@ img {
     display: inline-block;
     list-style: disc outside;
     margin: 30px 70px;
+    margin-bottom: 90px;
     max-width: 70vw;
     font-size: 15px;
     line-height: 1.8;
@@ -313,7 +317,7 @@ img {
 }
 .warning {
     text-align: center;
-    margin: 50px auto;
+    margin: 70px auto;
 }
 .warning-title {
     width: 150px;
