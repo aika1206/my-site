@@ -601,3 +601,10 @@ body {
 .bg-btn:hover .normal {
     opacity: 0;
 }
+
+@media (max-width:1100px) {
+    .side-left,
+    .side-right{
+    display:none;
+  }
+}
