@@ -4,6 +4,7 @@
 html {
     font-size: 100%;
     overflow-x: hidden;
+    scrollbar-gutter: stable;
 }
 body {
   font-family: "fot-tsukuardgothic-std", sans-serif;
@@ -81,7 +82,7 @@ img {
 }
 /* ハンバーガーメニュー------------------- */
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
