@@ -3,11 +3,13 @@
 /* モバイルファースト共通部分------------------------------------------------ */
 html {
     font-size: 100%;
+    overflow-x: hidden;
 }
 body {
   font-family: "fot-tsukuardgothic-std", sans-serif;
   line-height: 1.7;
   color: #333;
+  overflow-x: hidden;
 }
 h2 {
     font-family: "vdl-yotag", sans-serif;
@@ -23,9 +25,9 @@ img {
 /* トップへ戻るボタン -------------------- */
 .to-top-btn {
   position: fixed;
-  right: 16px;
+  right: calc(50% - 200px + 16px);
   bottom: 16px;
-  z-index: 2000;
+  z-index: 5000;
   width: 90px;
 }
 .to-top-btn img {
@@ -39,20 +41,21 @@ img {
     position: relative;
     background-size: cover;
     background-position: center top;
-    height: 1380px;
+    min-height: 190vh;
     width: 100%;
     padding-top: 120px;
+    padding-bottom: 0;
 }
 .subcover {
     position: relative;
-    background-size: cover;
+    background-size: contain;
     background-position: center top;
-    height: 530px;
     width: 100%;
-    padding-top: 120px;
+    min-height: 100vh;
+    padding-bottom: 0;
 }
 .page-header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -61,24 +64,35 @@ img {
 }
 .cover-home {
     background-image: url(../images/MV\ bg.png);
-    background-size: 100vw;
-    background-position: top;
+    background-size: cover;
+    background-position: top center;
     background-repeat: no-repeat;
 }
 .header-rogo {
     display: block;
-    margin: 60vw auto;
-    width: 70vw;
+    margin: 230px auto 0;
+    width: 70%;
+    max-width: 280px;
     height: auto;
 }
 /* ハンバーガーメニュー------------------- */
 .header {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    z-index: 1000;
+    max-width: 400px;
+    z-index: 3000;
 }
+.header img {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 /* ハンバーガーボタン */
 .hamburger {
     position: absolute;
@@ -90,7 +104,7 @@ img {
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1100;
+    z-index: 4000;
 }
 .hamburger span {
     position: absolute;
@@ -119,39 +133,45 @@ img {
 /* メニュー本体 */
 .nav {
     position: fixed;
-    top: -100%;
+    top: -100vh;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;       /* 画面いっぱい */
     background: url("../images/Hamburger\ menu\ bg.png") no-repeat center / cover;
     transition: top 0.4s ease;   /* ぬるっと動く */
     opacity: 0;
+    z-index: 2000;
+    pointer-events:none;
 }
 /* openクラスが付いたら表示 */
 .nav.open {
     top: 0;   /* 上からスライドしてくる */
     opacity: 1;
+    pointer-events:auto;
 }
 /* メニュー中身 */
 .nav ul {
     list-style: none;
-    padding: 80px 20px;
-    margin: 4vw;
+    padding: 120px 20px 40px;
+    margin: 0;
     text-align: center;
+    display:flex;
+    flex-direction:column;
+    gap:18px; 
 }
 .nav li {
-    margin-bottom: 24px;
+    margin: 0;
 }
 .nav li img {
-    width: 80vw;
-    max-width: 100%;
+    width: 90%;
+    max-width: 320px;
     display: block;
-    margin: 6vw auto;
+    margin: 0 auto;
 }
 /* 本文---------------------------------- */
 .section-title {
     text-align: center;
-    margin-top: 20vw;
+    margin-top: 10vw;
 }
 .section-title-img {
     display: block;
@@ -161,7 +181,7 @@ img {
 }
 .section-text {
     margin: 40px auto 0;
-    max-width: 70vw;
+    max-width: 70%;
     margin-bottom: 60px;
     font-size: 16px;
     line-height: 1.8;
@@ -177,7 +197,6 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* gap: 16px; */
     padding: 12px 0;
 }
 .info-label {
@@ -225,10 +244,10 @@ img {
 }
 /* 差し込み画像------------------------- */
 .img {
-    display: block;
-    width: 80vw;
-    height: auto;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
 }
 .stage {
     margin: 50px auto;
@@ -284,7 +303,7 @@ img {
 /* guide.html------------------------------------------------------------------- */
 .cover-guide {
     background-image: url(../images/Header\ cover1.png);
-    background-size: 100vw;
+    background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
 }
@@ -295,7 +314,7 @@ img {
     display: inline-block;
     list-style: disc outside;
     margin: 30px 70px;
-    max-width: 70vw;
+    max-width: 70%;
     font-size: 15px;
     line-height: 1.8;
     color: #333333;
@@ -310,7 +329,7 @@ img {
     list-style: disc outside;
     margin: 30px 70px;
     margin-bottom: 90px;
-    max-width: 70vw;
+    max-width: 70%;
     font-size: 15px;
     line-height: 1.8;
     color: #333333;
@@ -329,7 +348,7 @@ img {
     display: inline-block;
     list-style: disc outside;
     margin: 40px 82px;
-    max-width: 80vw;
+    max-width: 80%;
     font-size: 15px;
     line-height: 1.8;
     color: #333333;
@@ -339,7 +358,7 @@ img {
 /* food.html-------------------------------------------------------------------- */
 .cover-food {
     background-image: url(../images/Header\ cover2.png);
-    background-size: 100vw;
+    background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
 }
@@ -398,7 +417,7 @@ img {
 }
 /* フードメニュー--------------- */
 .foodMenu {
-    width: 80vw;
+    width: 80%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -406,7 +425,7 @@ img {
 }
 /* 体験ブース------------------- */
 .boothMenu {
-    width: 80vw;
+    width: 80%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -416,7 +435,7 @@ img {
 /* music.html-------------------------------------------------------------------- */
 .cover-music {
     background-image: url(../images/Header\ cover3.png);
-    background-size: 100vw;
+    background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
 }
@@ -427,25 +446,25 @@ img {
     display: inline-block;
     list-style: disc outside;
     margin: 30px 70px;
-    max-width: 70vw;
+    max-width: 70%;
     font-size: 15px;
     line-height: 1.8;
     color: #333333;
     text-align: left;
 }
 .timetable {
-    width: 100vw;
+    width: 100%;
 }
 
 /* access.html-------------------------------------------------------------------- */
 .cover-access {
     background-image: url(../images/Header\ cover4.png);
-    background-size: 100vw;
+    background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
 }
 .accessMenu {
-    width: 80vw;
+    width: 80%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -453,7 +472,7 @@ img {
     margin-bottom: 40px;
 }
 .contactMenu {
-    width: 80vw;
+    width: 80%;
     height: auto;
     display: block;
     margin-left: auto;
@@ -484,10 +503,10 @@ iframe {
     text-align: center;
 }
 .emailbtn {
-    width: 60vw;
+    width: 60%;
     text-align: center;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     background-color: #ffbf1f;
     color: #fff;
     border-radius: 8px;
@@ -495,4 +514,90 @@ iframe {
 }
 .emailbtn:hover {
     background-color: darkgoldenrod;
+}
+
+/* PC版レイアウト-------------------------------------------------------------------------- */
+
+body {
+    margin: 0;
+    background: url(../images/pc-bg.png) no-repeat center/cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+.mobile-frame {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    min-height: 100vh;
+    position: relative;
+    overflow-y: auto;
+}
+.side-left {
+    position: fixed;
+    top: 25%;
+    left: 50px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 300px;
+    height: auto;
+}
+.side-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 300px;
+}
+.bg-shootingstar {
+    position: absolute;
+    top: 10%;
+    right: 80px;
+    z-index: 1000;
+    text-align:center;
+    width: 170px;
+    height: auto;
+}
+.pc-bg-menu {
+    position: absolute;
+    top: 65%;
+    right: 60px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    text-align:center;
+    width: 300px;
+    height: auto;
+}
+.bg-button-list {
+    top: 45%;
+    padding: 30px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    right: 85px;
+}
+.bg-btn {
+    z-index: 2000;
+    position: relative;
+    display: block;
+    width: 250px;
+    transition: transform 0.2s ease, box-shadow 0.2 ease;
+}
+.bg-btn-img {
+    width: 100%;
+    display: block;
+}
+.bg-btn .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.bg-btn:hover .hover {
+    opacity: 1;
+}
+.bg-btn:hover .normal {
+    opacity: 0;
 }

@@ -6,6 +6,9 @@
         <meta name="description" content="眠るための音楽ライブ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+         <!-- ファビコン -->
+        <link rel="icon" type="images.png" href="images/favicon.png">
+        
         <!-- リセットcss -->
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 
@@ -45,6 +48,37 @@
     </head>
 
     <body>
+        <div class="side-left">
+            <img src="images/pc-bg-title.png" alt="pc-bg-title">
+        </div>
+        <div class="side-right">
+            <img src="images/pc-bg-shootingstar.png" alt="pc-bg-shootingstar" class="bg-shootingstar">
+            <img src="images/pc-bg-memu.png" class="pc-bg-menu">
+            <!-- メニューボタン -->
+            <div class="bg-button-list">
+                <a href="guide.html" class="bg-btn">
+                    <img src="images/button1.png" alt="持ち物、過ごし方" class="btn-img">
+                    <img src="images/button5.png" class="bg-btn-img hover">
+                </a>
+
+                <a href="food.html" class="bg-btn">
+                    <img src="images/button2.png" alt="フード、体験" class="btn-img">
+                    <img src="images/button6.png" class="bg-btn-img hover">
+                </a>
+
+                <a href="music.html" class="bg-btn">
+                    <img src="images/button3.png" alt="楽曲、タイムテーブル" class="btn-img">
+                    <img src="images/button7.png" class="bg-btn-img hover">
+                </a>
+
+                <a href="access.html" class="bg-btn">
+                    <img src="images/button4.png" alt="アクセス、お問い合わせ" class="btn-img">
+                    <img src="images/button8.png" class="bg-btn-img hover">
+                </a>
+            </div>
+        </div>
+        
+        <div class="mobile-frame">
         <!-- メインビジュアルとヘッダー -->
         <div class="subcover cover-access">
             <header class="page-header">
@@ -124,7 +158,7 @@
                 のSNS、もしくはお電話にて再度ご連絡ください。
             </p>
             <div class="align-center">
-                <a class="emailbtn" href="maito:N2520202@ngo.ohara.ac.jp">
+                <a class="emailbtn" href="mailto:N2520202@ngo.ohara.ac.jp">
                     お問い合わせ
                 </a>
             </div>
@@ -151,5 +185,6 @@
         <a href="index.html" class="to-top-btn">
             <img src="images/top-button.png" alt="ホームへ">
         </a>
+        </div>
     </body>
 </html>
