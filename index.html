@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
 
         <!-- スマホ縮尺 -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 
         <script>
             // adobeフォント
@@ -78,9 +78,9 @@
             </div>
         </div>
 
-        <div class="center">
-        <div class="mobile-frame">
         <!-- メインビジュアルとヘッダー -->
+        <div class="wrapper">
+        <div class="mobile-frame">
         <div class="cover cover-home">
             <header class="page-header">
                 <h1 class="align-center">
@@ -184,6 +184,7 @@
             hamburger.addEventListener("click", () =>{
                 hamburger.classList.toggle("open")
                 nav.classList.toggle("open");
+                document.body.classList.toggle("menu-open");
             })
         </script>
 

@@ -45,6 +45,8 @@ img {
     width: 100%;
     padding-top: 120px;
     padding-bottom: 0;
+    max-width: 400px;
+    margin: 0 auto;
 }
 .subcover {
     position: relative;
@@ -53,6 +55,8 @@ img {
     width: 100%;
     min-height: 100vh;
     padding-bottom: 0;
+    max-width: 400px;
+    margin: 0 auto;
 }
 .page-header {
     position: absolute;
@@ -64,7 +68,7 @@ img {
 }
 .cover-home {
     background-image: url(../images/MV\ bg.png);
-    background-size: cover;
+    background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -77,7 +81,7 @@ img {
 }
 /* ハンバーガーメニュー------------------- */
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -167,6 +171,10 @@ img {
     max-width: 320px;
     display: block;
     margin: 0 auto;
+}
+body.menu-open{
+  overflow: hidden;
+  height: 100vh;
 }
 /* 本文---------------------------------- */
 .section-title {
@@ -518,15 +526,34 @@ iframe {
 
 /* PC版レイアウト-------------------------------------------------------------------------- */
 
+/* 初期状態＝モバイル */
+.side-left,
+.side-right{
+  display:none;
+}
+.wrapper{
+  display:flex;
+  justify-content:center;
+  width: 100%;
+}
+
+/* PCレイアウト（1100px以上のみ） */
+@media (min-width:1000px){
+
+/* PCのときだけ出す */
+.side-left,
+.side-right{
+  display:block;
+}
+
 body {
     margin: 0;
     background: url(../images/pc-bg.png) no-repeat center/cover;
     background-attachment: fixed;
-    display: flex;
-    justify-content: center;
 }
 .mobile-frame {
     width: 100%;
+    margin: 0 auto;
     max-width: 400px;
     background: #fff;
     min-height: 100vh;
@@ -601,10 +628,4 @@ body {
 .bg-btn:hover .normal {
     opacity: 0;
 }
-
-@media (max-width:1100px) {
-    .side-left,
-    .side-right{
-    display:none;
-  }
 }

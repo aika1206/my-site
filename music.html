@@ -77,9 +77,10 @@
                 </a>
             </div>
         </div>
-        
-        <div class="mobile-frame">
+
         <!-- メインビジュアルとヘッダー -->
+        <div class="wrapper">
+        <div class="mobile-frame">
         <div class="subcover cover-music">
             <header class="page-header">
                 <h1 class="align-center">
@@ -113,6 +114,7 @@
             hamburger.addEventListener("click", () => {
                 hamburger.classList.toggle("open");
                 nav.classList.toggle("open");
+                document.body.classList.toggle("menu-open");
             });
         </script>
 
@@ -158,6 +160,7 @@
         <a href="index.html" class="to-top-btn">
             <img src="images/top-button.png" alt="ホームへ">
         </a>
+        </div>
         </div>
     </body>
 </html>
