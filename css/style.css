@@ -377,6 +377,7 @@ body.menu-open{
     text-align: center;
     min-height: 420px;
     margin-top: 40px;
+    max-width: 400px;
 }
 .slideshow img {
     width: 100%;
@@ -463,6 +464,8 @@ body.menu-open{
 }
 .timetable {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 /* access.html-------------------------------------------------------------------- */
@@ -497,13 +500,13 @@ iframe {
     margin-bottom: 100px;
 }
 .email {
-
     max-width: 90%;
     margin: 30px;
     background-color: #ddd;
     border-radius: 48px;
     padding: 1.5rem 2.5rem 2.5rem;
     margin: 3rem 2rem;
+    max-width: 400px;
 }
 .email p {
     margin: 1rem 0 2rem;
