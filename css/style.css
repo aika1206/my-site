@@ -540,7 +540,7 @@ iframe {
   width: 100%;
 }
 
-/* PCレイアウト（1100px以上のみ） */
+/* PCレイアウト（1000px以上のみ） */
 @media (min-width:1000px){
 
 /* PCのときだけ出す */
@@ -630,5 +630,8 @@ body {
 }
 .bg-btn:hover .normal {
     opacity: 0;
+}
+.hamburger {
+    display: none;
 }
 }
