@@ -99,25 +99,31 @@ img {
 
 }
 .cover-home {
-    background-image: url(../images/MV\ bg.png);
+    background-image: url(../images/MV-bg.png);
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: mvFadeUp 1.8s ease-out forwards;
-}
-@keyframes mvFadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 .header-rogo {
     display: block;
     margin: 230px auto 0;
     width: 70%;
     max-width: 280px;
+    height: auto;
+}
+.header-date {
+    display: block;
+    margin: 70px auto;
+    width: 70%;
+    max-width: 220px;
+    height: auto;
+}
+.header-subtitle {
+    display: block;
+    margin: auto;
+    margin-top: -20px;
+    width: 70%;
+    max-width: 13px;
     height: auto;
 }
 /* ハンバーガーメニュー------------------- */
@@ -552,7 +558,7 @@ iframe {
 .fade-up {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 1.6s ease, transform 2.0s ease;
 }
 .fade-up.show {
     opacity: 1;
