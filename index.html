@@ -48,12 +48,13 @@
     </head>
 
     <body>
+        <!-- PC版背景 -->
         <div class="side-left">
             <img src="images/pc-bg-title.png" alt="pc-bg-title">
         </div>
         <div class="side-right">
             <img src="images/pc-bg-shootingstar.png" alt="pc-bg-shootingstar" class="bg-shootingstar">
-            <img src="images/pc-bg-memu.png" class="pc-bg-menu">
+            <img src="images/pc-bg-menu.png" class="pc-bg-menu">
             <!-- メニューボタン -->
             <div class="bg-button-list">
                 <a href="guide.html" class="bg-btn">
@@ -111,24 +112,24 @@
         </div>
 
         <!-- どんなイベント？ -->
-        <section class="section-title">
+        <section class="section-title fade-up">
             <img class="section-title-img" src="images/What kind of event is it.png" alt="どんなイベント？">
         </section>
 
-        <p class="section-text">
+        <p class="section-text fade-up">
             寝転がりながら、音楽に身をゆだねるイベントです。
             ゆったりした時間の中で、心と体を休めていきませんか？
         </p>
 
         <!-- 左雲 -->
-            <img class="cloud-left" src="images/cloud1.png" alt="左雲">
+            <img class="cloud-left-index" src="images/cloud1.png" alt="左雲">
 
         <!-- もっとくわしく！ -->
-        <section class="section-title">
+        <section class="section-title fade-up">
             <img class="section-title-img" src="images/More details.png" alt="もっとくわしく！">
         </section>
 
-        <section class="info">
+        <section class="info fade-up">
             <div class="info-item">
                 <div class="info-label">場所</div>
                 <div class="info-text">月ヶ丘公園　特設野外ステージ</div>
@@ -207,5 +208,21 @@
         </a>
         </div>
         </div>
+        <script>
+            // fade-upがついている要素を集める
+            const fadeElements = document.querySelectorAll('.fade-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+                });
+                },
+                {
+                    threshold: 0.2
+                });
+
+            fadeElements.forEach(el => observer.observe(el));
+        </script>
     </body>
 </html>

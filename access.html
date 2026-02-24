@@ -48,12 +48,13 @@
     </head>
 
     <body>
+        <!-- PC版背景 -->
         <div class="side-left">
             <img src="images/pc-bg-title.png" alt="pc-bg-title">
         </div>
         <div class="side-right">
             <img src="images/pc-bg-shootingstar.png" alt="pc-bg-shootingstar" class="bg-shootingstar">
-            <img src="images/pc-bg-memu.png" class="pc-bg-menu">
+            <img src="images/pc-bg-menu.png" class="pc-bg-menu">
             <!-- メニューボタン -->
             <div class="bg-button-list">
                 <a href="guide.html" class="bg-btn">
@@ -125,7 +126,7 @@
 
         <!-- Googleマップ -->
         <section class="location">
-            <div class="location-map">
+            <div class="location-map fade-up">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208419.
                 59284884422!2d136.6562131899525!3d35.29216041891003!2m3!1f0!2f0!3f0!3m2!
                 1i1024!2i768!4f13.1!3m3!1m2!1s0x600376db82aeeaed%3A0xce812977f295acd4!
@@ -133,7 +134,7 @@
                 5e0!3m2!1sja!2sjp!4v1770618707120!5m2!1sja!2sjp" width="400" height="320" 
                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="location-text">
+            <div class="location-text fade-up">
                 <p>
                     〒468-0064<br>
                     愛知県光ヶ丘市月が丘町1丁目5−8<br>
@@ -153,7 +154,7 @@
         </div>
 
         <!-- メールアドレス -->
-        <section class="email">
+        <section class="email fade-up">
             <p>
                 以下のボタンからメールにてお問い合わせください。２営業日以内にご返信させていただいております。
                 もし数日中に返事がない場合は、正しく受信できなかった可能性がありますので、恐れ入りますが下記
@@ -189,5 +190,20 @@
         </a>
         </div>
         </div>
+        <script>
+            const fadeElements = document.querySelectorAll('.fade-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+                });
+                },
+                {
+                    threshold: 0.2
+                });
+
+            fadeElements.forEach(el => observer.observe(el));
+        </script>
     </body>
 </html>

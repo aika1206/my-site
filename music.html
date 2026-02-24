@@ -48,12 +48,13 @@
     </head>
 
     <body>
+        <!-- PC版背景 -->
         <div class="side-left">
             <img src="images/pc-bg-title.png" alt="pc-bg-title">
         </div>
         <div class="side-right">
             <img src="images/pc-bg-shootingstar.png" alt="pc-bg-shootingstar" class="bg-shootingstar">
-            <img src="images/pc-bg-memu.png" class="pc-bg-menu">
+            <img src="images/pc-bg-menu.png" class="pc-bg-menu">
             <!-- メニューボタン -->
             <div class="bg-button-list">
                 <a href="guide.html" class="bg-btn">
@@ -120,10 +121,10 @@
 
         <!-- 音楽のジャンルは？ -->
         <div class="music">
-            <section class="section-title">
+            <section class="section-title fade-up">
                 <img class="section-title-img" src="images/What is the genre of music.png" alt="音楽のジャンルは？">
             </section>
-            <div class="music-text">
+            <div class="music-text fade-up">
                 <ul>
                     <li>アコースティック</li>
                     <li>エレクトロポップ</li>
@@ -162,5 +163,20 @@
         </a>
         </div>
         </div>
+        <script>
+            const fadeElements = document.querySelectorAll('.fade-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+                });
+                },
+                {
+                    threshold: 0.2
+                });
+
+            fadeElements.forEach(el => observer.observe(el));
+        </script>
     </body>
 </html>

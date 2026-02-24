@@ -37,6 +37,36 @@ img {
   display: block;
 }
 
+/* 雲　装飾（全ページ共通）--------------------------------------------------------------------- */
+.cloud-right {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+}
+.cloud-left {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-right: auto;
+    margin-top: -60px;
+}
+.cloud-left-index {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.cloud-left-food {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-right: auto;
+    margin-top: -45px;
+}
+
 /* メインメニュー----------------------------------------------------- */
 .cover {
     position: relative;
@@ -54,10 +84,11 @@ img {
     background-size: contain;
     background-position: center top;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     padding-bottom: 0;
     max-width: 400px;
     margin: 0 auto;
+    margin-bottom: -100px;
 }
 .page-header {
     position: absolute;
@@ -72,6 +103,15 @@ img {
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: mvFadeUp 1.8s ease-out forwards;
+}
+@keyframes mvFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .header-rogo {
     display: block;
@@ -180,11 +220,12 @@ body.menu-open{
 /* 本文---------------------------------- */
 .section-title {
     text-align: center;
-    margin-top: 10vw;
+    margin-top: 10vh;
 }
 .section-title-img {
     display: block;
     margin: 0 auto;
+    margin-top: -60px;
     width: 200px;
     height: auto;
 }
@@ -238,6 +279,7 @@ body.menu-open{
 .btn-img {
     width: 100%;
     display: block;
+    transition: opacity 0.5s ease;
 }
 .btn .hover {
     position: absolute;
@@ -286,27 +328,6 @@ body.menu-open{
     padding: 2rem 0;
     margin-top: 6rem;
     color: #fff;
-}
-
-/* 雲　装飾（全ページ共通）--------------------------------------------------------------------- */
-.cloud-right {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-}
-.cloud-left {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin-right: auto;
-}
-.cloud-left-food {
-    width: 200px;
-    height: auto;
-    display: block;
-    margin-right: auto;
-    margin-top: -45px;
 }
 
 /* guide.html------------------------------------------------------------------- */
@@ -527,6 +548,17 @@ iframe {
     background-color: darkgoldenrod;
 }
 
+/* テキストフェードイン-------------------------------------------------------------------- */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* PC版レイアウト-------------------------------------------------------------------------- */
 
 /* 初期状態＝モバイル */
@@ -562,6 +594,7 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-y: auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
 }
 .side-left {
     position: fixed;
@@ -618,12 +651,14 @@ body {
 .bg-btn-img {
     width: 100%;
     display: block;
+    transition: opacity 0.5s ease;
 }
 .bg-btn .hover {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
+    transition: opacity 0.5s ease;
 }
 .bg-btn:hover .hover {
     opacity: 1;
@@ -633,5 +668,9 @@ body {
 }
 .hamburger {
     display: none;
+}
+.header {
+   position: static;
+   transform: none;
 }
 }

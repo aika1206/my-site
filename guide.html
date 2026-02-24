@@ -49,12 +49,13 @@
     </head>
 
     <body>
+        <!-- PC版背景 -->
         <div class="side-left">
             <img src="images/pc-bg-title.png" alt="pc-bg-title">
         </div>
         <div class="side-right">
             <img src="images/pc-bg-shootingstar.png" alt="pc-bg-shootingstar" class="bg-shootingstar">
-            <img src="images/pc-bg-memu.png" class="pc-bg-menu">
+            <img src="images/pc-bg-menu.png" class="pc-bg-menu">
             <!-- メニューボタン -->
             <div class="bg-button-list">
                 <a href="guide.html" class="bg-btn">
@@ -118,11 +119,11 @@
             });
         </script>
         <!-- あるといいもの -->
-        <div class="Belongings">
+        <div class="Belongings fade-up">
             <section class="section-title">
                 <img class="section-title-img" src="images/Belongings.png" alt="あるといいもの">
             </section>
-            <div class="Belongings-text">
+            <div class="Belongings-text fade-up">
                 <ul>
                     <li>お気に入りのクッション</li>
                     <li>寝心地のいい毛布</li>
@@ -135,10 +136,10 @@
             <img class="cloud-right" src="images/cloud3.png" alt="右雲">
 
         <!-- おすすめの過ごし方 -->
-        <section class="section-title">
+        <section class="section-title fade-up">
             <img class="section-title-img" src="images/How to relax.png" alt="おすすめの過ごし方">
         </section>
-        <div id="relax" class="relax">
+        <div id="relax" class="relax fade-up">
             <ul>
                 <li>まずは寝ころびスペースで一休み</li>
                 <li>空の色が変わるのを楽しむ</li>
@@ -152,8 +153,8 @@
 
         <!-- 注意事項 -->
          <div class="warning">
-            <img class="warning-title" src="images/Warning.png" alt="注意事項">
-            <div class="warning-text">
+            <img class="warning-title fade-up" src="images/Warning.png" alt="注意事項">
+            <div class="warning-text fade-up">
                 <ul>
                     <li>静かな時間を大切にしています。</li>
                     <li>写真撮影は周囲への配慮をお願いします。</li>
@@ -187,5 +188,20 @@
         </a>
         </div>
         </div>
+        <script>
+            const fadeElements = document.querySelectorAll('.fade-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+                });
+                },
+                {
+                    threshold: 0.2
+                });
+
+            fadeElements.forEach(el => observer.observe(el));
+        </script>
     </body>
 </html>

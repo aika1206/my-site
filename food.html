@@ -48,12 +48,13 @@
     </head>
 
     <body>
+        <!-- PC版背景 -->
         <div class="side-left">
             <img src="images/pc-bg-title.png" alt="pc-bg-title">
         </div>
         <div class="side-right">
             <img src="images/pc-bg-shootingstar.png" alt="pc-bg-shootingstar" class="bg-shootingstar">
-            <img src="images/pc-bg-memu.png" class="pc-bg-menu">
+            <img src="images/pc-bg-menu.png" class="pc-bg-menu">
             <!-- メニューボタン -->
             <div class="bg-button-list">
                 <a href="guide.html" class="bg-btn">
@@ -139,7 +140,7 @@
 
             <div class="slide-bg">
                 <h2 class="slide-title" id="foodTitle">ハーブティー</h2>
-                <p id="foodText" class="slide-text">
+                <p id="foodText" class="slide-text fade-up">
                 ラベンダーとカモミールをブレンドした、心安らぐハーブティー。
                 </p>
             </div>
@@ -170,7 +171,7 @@
 
             <div class="slide-bg">
                 <h2 class="slide-title" id="boothTitle">夢日記ラボ</h2>
-                <p id="boothText" class="slide-text">
+                <p id="boothText" class="slide-text fade-up">
                 今日の夢をそのまま書いて貼ってみよう。
                 </p>
             </div>
@@ -260,5 +261,20 @@
         </a>
         </div>
         </div>
+        <script>
+            const fadeElements = document.querySelectorAll('.fade-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+                });
+                },
+                {
+                    threshold: 0.2
+                });
+
+            fadeElements.forEach(el => observer.observe(el));
+        </script>
     </body>
 </html>
