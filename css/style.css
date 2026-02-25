@@ -600,11 +600,11 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-y: auto;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
 }
 .side-left {
     position: fixed;
-    top: 25%;
+    top: 45%;
     left: 50px;
     transform: translateY(-50%);
     z-index: 1000;
@@ -629,7 +629,7 @@ body {
 }
 .pc-bg-menu {
     position: absolute;
-    top: 65%;
+    top: 55%;
     right: 60px;
     transform: translateY(-50%);
     z-index: 1000;
@@ -638,7 +638,7 @@ body {
     height: auto;
 }
 .bg-button-list {
-    top: 45%;
+    top: 35%;
     padding: 30px 0 30px 0;
     display: flex;
     flex-direction: column;
